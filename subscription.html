@@ -1,0 +1,51 @@
+<div class="wrapper-inner">
+    <div ng-include src="'templates/nav.html'" ng-controller="controllers.MainNav" class="nav-include"></div>
+
+
+    <main class="content clearfix subscription">
+         <div class="subscription__main-header admin-main-header clearfix">
+              <h2 class="admin-main-header__h2">Подписка</h2>
+         </div>
+
+         <div class="subscription__expiration-date">
+              <span>До окончания подписки:</span>
+              <span>&nbsp</span>
+              <span class="subscription__red-text" ng-if="!showSpinner">{{daysLeft}} дней</span>
+         </div>
+
+         <!---
+         <div class="subscription__loading-outer" >
+              <img src="./img/loading.png"
+                   ng-class="{'subscription__loading-visible': showSpinner}"
+                   class="subscription__loading">
+         </div>
+         -->
+         <p class="subscription__error-msg">{{errMsg}}</p>
+
+         <div class="subscription-options">
+              <div class="subscription-options__option" ng-click="selected=1" ng-class="{'subscription-options__option-selected': selected==1}">
+                  <div class="subscription-option__type">Базовый</div>
+                  <div class="subscription-option__price">199 &#8381</div>
+                  <div class="subscription-option__duration">1 месяц</div>
+              </div>
+              <div class="subscription-options__option" ng-click="selected=2" ng-class="{'subscription-options__option-selected': selected==2}">
+                  <div class="subscription-option__type">17% экономии</div>
+                  <div class="subscription-option__price">500 &#8381</div>
+                  <div class="subscription-option__duration">3 месяца</div>
+              </div>
+              <div class="subscription-options__option" ng-click="selected=3" ng-class="{'subscription-options__option-selected': selected==3}">
+                  <div class="subscription-option__type">38% экономии</div>
+                  <div class="subscription-option__price">1500 &#8381</div>
+                  <div class="subscription-option__duration">12 месяца</div>
+              </div>
+         </div>
+
+         <br/>
+         <form class="subscription-form">
+              <input class="subscription-form__button" type="submit"
+                   value="Продлить"
+                   ng-disabled="true"
+                   ng-click="onBuy()">
+         </form>
+    </main>
+</div>

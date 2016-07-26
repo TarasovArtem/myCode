@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>ProjectX</title>
+    </head>
+    <body>
+        <div class="wrapper clearfix" ng-app="">
+            <header class="navigation">
+                <nav>
+                    <h1>
+                        <img src="./static/img/logo.svg" alt="logo" class="logo">
+                        <span class="hidden">ProjectX</span>
+                    </h1>
+                    <ul>
+                        <li><a href="./static/feed.html">Лента</a></li>
+                        <li>
+                            <a href="./static/objects.html">Объекты</a>
+                            <ul>
+                                <li><a href="" class="active">Тверская, 16, кв. 27</a></li>
+                                <li><a href="">Скаковая, 13, кв. 15</a></li>
+                                <li><a href="">Добавить +</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Сообщения</a></li>
+                        <li><a href="./static/subscription.html">Подписка</a></li>
+                        <li><a href="./static/settings.html">Настройка</a></li>
+                        <li><a href="#">Выйти</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="history">
+                <div class="main-header clearfix">
+                    <h2>
+                        <span class="normal">История платежей</span>
+                        <span class="address">Москва, ул. Тверская, д. 16, кв. 25</span>
+                    </h2>
+                </div>
+                <div class="dropdown">
+                    <input type="text" readonly class="dropdown-toggle" name="payment-type"
+                        ng-model="paymentType" ng-init="paymentType = 'Все'">
+                    <ul class="hidden">
+                        <li ng-click="paymentType = 'Все'">Все</li>
+                        <li ng-click="paymentType = 'Аренда'">Аренда</li>
+                        <li ng-click="paymentType = 'ЖКУ'">ЖКУ</li>
+                    </ul>
+                </div>
+                <div class="payment clearfix type-apartment"
+                    ng-show="paymentType === 'Все' || paymentType === 'Аренда'">
+                    <div class="left">
+                        <div class="price">- 50 000  Р</div>
+                        <div class="payment-type">Платёж за декабрь</div>
+                        <div class="directions">
+                            <div class="from">
+                                <div class="direction">Откуда</div>
+                                <div class="place">Tinkoff bank (**** 7483)</div>
+                            </div>
+                            <div class="to">
+                                <div class="direction">Куда</div>
+                                <div class="place">Банковская карта (**** 5483)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="date">5 дек 2015</div>
+                    </div>
+                </div>
+                <div class="payment clearfix type-utilities"
+                    ng-show="paymentType === 'Все' || paymentType === 'ЖКУ'">
+                    <div class="left">
+                        <div class="price">- 680  Р</div>
+                        <div class="payment-type">Электроэнергия за декабрь</div>
+                        <div class="directions">
+                            <div class="from">
+                                <div class="direction">Откуда</div>
+                                <div class="place">Tinkoff bank (**** 7483)</div>
+                            </div>
+                            <div class="to">
+                                <div class="direction">Куда</div>
+                                <div class="place">Мосэнергосбыт</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="date">5 дек 2015</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+        <script src="./js/jquery.maskedinput.min.js"></script>
+        <script src="./js/jquery.nicefileinput.min.js"></script>
+        <script src="./js/common.js"></script>
+    </body>
+</html>

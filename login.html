@@ -1,0 +1,41 @@
+<div class="wrapper wrapper-index">
+     <header class="header-index">
+          <div ng-include="'templates/header.html'"></div>
+
+         <div class="tabs-login">
+             <a class="tab-login__tab-log-active" href="#/login">Вход</a>
+             <a class="tab-login__tab-reg" href="#/registration">Регистрация</a>
+         </div>
+     </header>
+
+     <main class="index-login">
+      <div class="login-form">
+          <form id="auth-email-form" class="login-form" name="auth-email-form" accept-charset="utf8" method="post" novalidate>
+              <input class="login-form__auth-email" autofocus ng-disabled="showSpinner" type="email" name="auth-email" required placeholder="{{emailPlaceholder}}" ng-model="email">
+              
+              <input class="login-form__auth-password" ng-disabled="showSpinner" type="password" name="auth-password" required placeholder="{{passwordPlaceholder}}" ng-model="password">
+
+              <!-- TODO: center it
+              <div class="loading-outer">
+                    <img src="./img/loading.png" 
+                         ng-class="{'loading-visible': showSpinner}" 
+                         class="loading">
+              </div>
+              -->
+              <div class="spinner-inline" ng-class="{'spinner-visible': showSpinner}"></div>
+              <p class="error-msg">{{errMsg}}</p>
+
+              <input type="submit"
+                     class="login-form__submit-button"
+                     value="Войти"
+                     ng-disabled="showSpinner || !email.length || !password.length"
+                     ng-click="onLogin(email,password)">
+          </form>
+
+          <a href="#/recover" class="login-form__recovery-button">Забыли пароль?</a>
+     </div>
+
+     <div ng-include="'templates/social_auth.html'"></div>
+
+     </main>
+</div>

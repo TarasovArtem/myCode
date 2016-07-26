@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>ProjectX</title>
+    </head>
+    <body>
+        <div class="wrapper new-contract" ng-app="creating-contract-module" ng-controller="contractCreating as contract">
+            <header class="new-contract">
+                <h1>
+                    <img src="./img/header-logo.png" alt="logo" class="logo">
+                    <span class="hidden">ProjectX</span>
+                </h1>
+                <div class="tabs clearfix">
+                    <div class="tab tab-address"
+                        ng-class="{'active': contract.tabAddress}" ng-click="contract.tabReset()">
+                        1. Адрес
+                    </div>
+                    <div class="tab tab-participants"
+                        ng-class="{'active': contract.tabParticipants}" ng-click="contract.tabParticipantsShow()">
+                        2. Участники
+                    </div>
+                    <div class="tab tab-conditions"
+                        ng-class="{'active': contract.tabConditions}" ng-click="contract.tabConditionsShow()">
+                        3. Условия
+                    </div>
+                    <div class="tab tab-confirmation"
+                        ng-class="{'active': contract.tabConfirmation}" ng-click="contract.tabConfirmationShow()">
+                        4. Подтверждение
+                    </div>
+                </div>
+            </header>
+            <main class="new-contract">
+                <form id="new-contact-form" accept-charset="utf8" method="post" novalidate="">
+                    <div class="address" ng-show="contract.tabAddress">
+                        <input type="text" required name="city" placeholder="Город*"
+                            ng-model="city">
+                        <input type="text" required name="street" placeholder="Улица*"
+                            ng-model="street">
+                        <input type="text" required name="house" placeholder="Дом*"
+                            ng-model="house">
+                        <input type="text" name="construction" placeholder="Корпус"
+                            ng-model="construction">
+                        <input type="text" name="building" placeholder="Строение"
+                            ng-model="building">
+                        <input type="text" name="appartment" placeholder="Квартира"
+                            ng-model="appartment">
+                        <button ng-click="contract.tabParticipantsShow()">Далее</button>
+                    </div>
+                    <div class="participants" ng-show="contract.tabParticipants">
+                        <fieldset class="user clearfix">
+                            <div class="input-extention">
+                                <input type="text" readonly required name="your-name"
+                                    ng-model="yourName" ng-init="yourName = 'Сергей Безруков (Вы)'">
+                                <label>sergey@gmail.com</label>
+                            </div>
+                            <div class="dropdown">
+                                <input type="text" readonly class="dropdown-toggle" name="your-role"
+                                    ng-model="yourRole" ng-init="yourRole = 'Снимает'">
+                                <ul class="hidden">
+                                    <li ng-click="yourRole = 'Владелец'">Владелец</li>
+                                    <li ng-click="yourRole = 'Снимает'">Снимает</li>
+                                    <li ng-click="yourRole = 'Сдаёт'">Сдаёт</li>
+                                </ul>
+                            </div>
+                        </fieldset>
+                        <fieldset class="new-man clearfix hidden">
+                            <input class="" type="email" required name="man-email" placeholder="Введите email..."
+                                ng-model="manEmail">
+                            <div class="dropdown">
+                                <input type="text" readonly class="dropdown-toggle" name="man-role"
+                                    ng-model="manRole" ng-init="manRole = 'Владелец'">
+                                <ul class="hidden">
+                                    <li ng-click="manRole = 'Владелец'">Владелец</li>
+                                    <li ng-click="manRole = 'Снимает'">Снимает</li>
+                                    <li ng-click="manRole = 'Сдаёт'">Сдаёт</li>
+                                </ul>
+                            </div>
+                            <!-- Если скрипт находит email, то убираем hidden класс с diva  -->
+                            <div class="input-extention hidden">
+                                <input type="text" readonly name="found-name" value="Александр Разенбаум">
+                                <label>sasha@gmail.com</label>
+                            </div>
+                        </fieldset>
+                        <button class="add-member-button">+ добавить участника</button>
+                        <button ng-click="contract.tabConditionsShow()">Далее</button>
+                    </div>
+                    <div class="conditions" ng-show="contract.tabConditions">
+                        <fieldset>
+                            <div class="info">Ежeмесечный платёж</div>
+                            <input type="text" required name="price" placeholder="Сумма, руб"
+                                ng-model="price">
+                        </fieldset>
+                        <fieldset>
+                            <div class="info">Залога</div>
+                            <input type="text" required name="deposit" placeholder="Сумма, руб"
+                                ng-model="deposit">
+                        </fieldset>
+                        <fieldset>
+                            <div class="info">Расчётный день</div>
+                            <input type="text" required name="payment-day" placeholder="Число"
+                                ng-model="paymentDay">
+                        </fieldset>
+                        <fieldset class="double clearfix">
+                            <div class="info">Период аренды</div>
+                            <input type="text" id="dateFrom" required name="date-from" placeholder="ДД.ММ.ГГГГ"
+                                ng-model="dateFrom">
+                            <input type="text" id="dateTo" required name="date-to" placeholder="ДД.ММ.ГГГГ"
+                                ng-model="dateTo">
+                        </fieldset>
+                        <fieldset>
+                            <div class="info">Оплата ЖКУ</div>
+                            <input type="text" class="utilities" required name="utilities" readonly
+                                ng-model="utilities" ng-init="utilities = 'Выбрать'">
+                            <div class="popup utilities-popup">
+                                <div class="utilities-popup-cont">
+                                    <fieldset>
+                                        <input type="checkbox" name="utilities-check1" id="utilities-check1"
+                                            ng-model="utilitiesCheck1">
+                                        <label for="utilities-check1">Электроэнергия</label>
+                                        <div class="dropdown">
+                                            <input type="text" readonly class="dropdown-toggle" name="your-role"
+                                                ng-model="yourRole" ng-init="yourRole = 'Снимает'">
+                                            <ul class="hidden">
+                                                <li ng-click="yourRole = 'Владелец'">Владелец</li>
+                                                <li ng-click="yourRole = 'Снимает'">Снимает</li>
+                                                <li ng-click="yourRole = 'Сдаёт'">Сдаёт</li>
+                                            </ul>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <input type="checkbox" name="utilities-check2" id="utilities-check2"
+                                            ng-model="utilitiesCheck2">
+                                        <label for="utilities-check2">Вода (ХВС, ГВС)</label>
+                                    </fieldset>
+                                    <fieldset>
+                                        <input type="checkbox" name="utilities-check3" id="utilities-check3"
+                                            ng-model="utilitiesCheck3">
+                                        <label for="utilities-check3">МГТС</label>
+                                    </fieldset>
+                                    <fieldset>
+                                        <input type="checkbox" name="utilities-check4" id="utilities-check4"
+                                            ng-model="utilitiesCheck4">
+                                        <label for="utilities-check4">ЕПД</label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="info">Договор аренды</div>
+                            <input type="file" class="nice-file" required name="file" placeholder="Загрузить"
+                                ng-model="file">
+                        </fieldset>
+                        <button ng-click="contract.tabConfirmationShow()">Далее</button>
+                    </div>
+                    <div class="confirmation" ng-show="contract.tabConfirmation">
+                        <div class="data">
+                            <div class="inserted">
+                                {[{street}]}, д. {[{house}]}, {[{block}]}
+                                <span ng-if="construction">, к. {[{construction}]}</span>
+                                <span ng-if="building">, з. {[{building}]}</span>
+                                <span ng-if="appartment">, кв. {[{appartment}]}</span>
+                            </div>
+                            <div class="pointer">Адрес</div>
+                        </div>
+                        <div class="data">
+                            <div class="inserted">{[{yourName}]}</div>
+                            <div class="pointer">{[{yourRole}]}</div>
+                        </div>
+                        <div class="data">
+                            <div class="inserted">{[{manEmail}]}</div>
+                            <div class="pointer">{[{manRole}]}</div>
+                        </div>
+                        <div class="data">
+                            <div class="inserted">{[{price}]}</div>
+                            <div class="pointer">Ежемесячный платёж</div>
+                        </div>
+                        <div class="data">
+                            <div class="inserted">{[{deposit}]}</div>
+                            <div class="pointer">Залог</div>
+                        </div>
+                        <div class="data">
+                            <div class="inserted">{[{paymentDay}]}</div>
+                            <div class="pointer">Расчётный день</div>
+                        </div>
+                        <div class="data">
+                            <div class="inserted">c {[{dateFrom}]} по {[{dateTo}]}</div>
+                            <div class="pointer">Период аренды</div>
+                        </div>
+                        <div class="data">
+                            <div class="inserted">
+                                <span ng-show="utilitiesCheck1">Электроэнергия; </span>
+                                <span ng-show="utilitiesCheck2">Вода (ХВС, ГВС); </span>
+                                <span ng-show="utilitiesCheck3">МГТС; </span>
+                                <span ng-show="utilitiesCheck4">ЕПД; </span>
+                            </div>
+                            <div class="pointer">Оплата ЖКУ</div>
+                        </div>
+                        <input type="submit" value="Добавить">
+                    </div>
+                </form>
+            </main>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+        <script src="./js/jquery.maskedinput.min.js"></script>
+        <script src="./js/jquery.nicefileinput.min.js"></script>
+        <script src="./js/creating-contract-module.js"></script>
+        <script src="./js/common.js"></script>
+    </body>
+</html>

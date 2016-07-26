@@ -1,0 +1,76 @@
+<div class="wrapper-inner">
+    <div ng-include src="'templates/nav.html'" ng-controller="controllers.MainNav" class="nav-include"></div>
+    <div ng-include src="'templates/dialogs.html'"></div>
+
+<main class="content clearfix object">
+    <div class="object__main-header admin-main-header clearfix">
+
+        <h2 class="object__header">
+            <input
+                    class="object__input"
+                    type="text"
+                    name="object-name"
+                    placeholder="Участник"
+                    readonly
+                    ng-value="getMemberName(member)">
+        </h2>
+
+        <div class="pull-right">
+            <button class="object__button-edit"
+                    ng-disabled="!isViewChanged"
+                    ng-click="save()">
+                <span class="button-span">Сохранить изменения</span>
+            </button>
+
+            <button class="object__button-delete" 
+               ng-disabled="!isIAmObjectOwner"
+               ng-click="removeMember()">
+                    <span class="button-span">
+                    <i class="fa fa-trash-o"></i>
+                    <span>&nbsp</span>
+                    <span class="object__button-delete__span">Удалить из участников</span>
+
+                    </span>
+            </button>
+        </div>
+
+ </div>
+
+<p class="error-msg">{{errMsg}}</p>
+
+<div class="object-member__address clearfix">
+    <h3 class="content-h3">
+         <span>Роль</span>
+    </h3>
+
+    <fieldset class="object-member__fieldset ">
+        <input class="member__input"
+               type="radio"
+               ng-model="member.role" 
+               ng-change="onViewChanged()"
+               value="1" name="settings-aletr1" id="settings-aletr1">
+
+        <label class="member__label" for="settings-aletr1">Снимает</label>
+    </fieldset>
+    <fieldset class="object-member__fieldset">
+        <input class="member__input"
+               type="radio"
+               ng-model="member.role" 
+               ng-change="onViewChanged()"
+               value="2" name="settings-aletr2" id="settings-aletr2">
+
+        <label class="member__label" for="settings-aletr2">Сдает</label>
+    </fieldset>
+    <fieldset class="object-member__fieldset">
+        <input class="member__input"
+               type="radio"
+               ng-model="member.role" 
+               ng-change="onViewChanged()"
+               value="3" name="settings-aletr3" id="settings-aletr3">
+
+        <label class="member__label" for="settings-aletr3">Владеет</label>
+    </fieldset>
+</div>
+
+</main>
+</div>

@@ -1,0 +1,68 @@
+<div class="wrapper-inner"> 
+    <div ng-include src="'templates/nav.html'" ng-controller="controllers.MainNav" class="nav-include"></div>
+    <div ng-include src="'templates/dialogs.html'"></div>
+
+    <main class="content clearfix">
+          <div class="object__main-header admin-main-header clearfix">
+
+                <h2 class="object__header">
+                    <input
+                            class="object__input"
+                            type="text"
+                            name="object-name"
+                            placeholder="Название Объекта"
+                            ng-change="onViewChanged()"
+                            ng-model="object.name">
+                </h2>
+
+                <div class="pull-right">
+                    <button class="object__button-edit"
+                            ng-disabled="!isViewChanged"
+                            ng-click="save()">
+                        <span class="button-span">Сохранить изменения</span>
+                    </button>
+
+                    <button class="object__button-delete" 
+                         ng-click="removeObject()"
+                         ng-disabled="!isIAmObjectOwner">
+
+                         <span ng-if="isIAmObjectOwner" class="button-span">
+                              <i class="fa fa-trash-o"></i>
+                              <span>&nbsp</span> <span class="object__button-delete__span">Удалить объект</span>
+                         </span>
+
+                         <span ng-if="!isIAmObjectOwner" class="button-span">
+                              <i class="fa fa-trash-o"></i>
+                              <span>&nbsp</span>
+                              <span class="object__button-delete__span">Отключиться от объекта</span>
+                         </span>
+                    </button>
+                </div>
+
+               <!-- TODO: 
+               <a class="delete-button" ng-if="!isIAmObjectOwner" ng-click="removeObject()">
+                   <i class="fa fa-trash-o"></i>
+                   <span>&nbsp</span>
+                   <span>Отключиться от объекта</span>
+               </a>
+               -->
+        </div>
+
+        <p class="error-msg">{{errMsg}}</p>
+
+        <ng-include src="'templates/object_address.html'"></ng-include>
+        <ng-include src="'templates/object_payments.html'"></ng-include>
+        <!-- TODO:
+             <ng-include src="'templates/object_period.html'"></ng-include>
+        -->
+
+        <!--
+        <div class="deposit">
+             <h3>
+                 <span class="info">50 000 Р</span>
+                 <span class="type">залог внесён</span>
+             </h3>
+        </div>
+        -->
+    </main>
+</div>

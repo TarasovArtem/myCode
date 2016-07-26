@@ -1,0 +1,23 @@
+<div class="wrapper index">
+  <header class="index header-index">
+      <div ng-include="'templates/header.html'"></div>
+  </header>
+
+  <main class="password-verification">
+      <div class="verification">
+          <h2 ng-if="isVerified">Ваш аккаунт подтвержден</h2>
+          <div ng-if="isVerified" class="text">Специально для вас мы запустили все свои серверы <br> на полную мощность.</div>
+
+          <form class="auth-email__form" id="auth-email-form" name="auth-email-form" accept-charset="utf8" method="post" novalidate>
+              <div class="spinner-inline" ng-class="{'spinner-visible': showSpinner}"></div>
+              <p class="error-msg">{{errMsg}}</p>
+
+              <input class="input__verification-button"
+                     ng-if="isVerified"
+                     type="submit"
+                     value="Вперед!"
+                     ng-click="gotoMain()">
+          </form>
+      </div>
+  </main>
+</div>

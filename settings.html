@@ -1,0 +1,80 @@
+<div class="wrapper-inner">
+
+    <div ng-include src="'templates/nav.html'" ng-controller="controllers.MainNav" class="nav-include"></div>
+
+    <main class="content clearfix">
+        <div class="settings__main-header admin-main-header clearfix">
+            <h2 class="admin-main-header__h2">
+                Настройки
+            </h2>
+        </div>
+        <form id="settings-form" accept-charset="utf8" method="post"></form>
+        <div class="settings-form__set-personnel">
+            <h3 class="content-admin__subheader">
+                Личные данные
+            </h3>
+            <input class="settings-form__input" type="text" name="settings-name" ng-change="onViewChanged()" ng-model="userInfo.name">
+            <input class="settings-form__input" type="text" name="settings-second-name" ng-change="onViewChanged()" ng-model="userInfo.lastName">
+            <input class="settings-form__input" type="email" name="settings-email" readonly ng-model="userInfo.email">
+        </div>
+
+        <!-- TODO:
+
+        <div class="loading-outer" >
+             <img src="./img/loading.png"
+                  ng-class="{'loading-visible': showSpinner}"
+                  class="loading">
+        </div>
+        -->
+        <p class="error-msg">{{errMsg}}</p>
+
+        <!--
+        <div class="set set-password">
+            <h3>Пароль</h3>
+            <input type="password" name="settings-current-password" required placeholder="Текущий пароль">
+            <a href="#" class="password-recovery-button">Забыли пароль?</a>
+            <input type="password" name="settings-new-password" required placeholder="Новый пароль">
+            <input type="password" name="settings-new-password-repeat" required placeholder="Повторите пароль">
+        </div>
+        -->
+
+        <div class="settings-form__set-personnel">
+            <h3 class="content-admin__subheader">
+                Уведомления на email
+            </h3>
+
+            <fieldset class="fieldset__settings">
+                <input class="input__settings" type="checkbox" name="settings-aletr1" id="settings-aletr1"
+                       ng-change="onViewChanged()"
+                       ng-model="userInfo.notifyMajorEvents">
+
+                <label class="label__settings" for="settings-aletr1">Ближайшие платежи и события</label>
+            </fieldset>
+
+            <fieldset class="fieldset__settings">
+                <input class="input__settings" type="checkbox"
+                       name="settings-aletr2" id="settings-aletr2"
+                       ng-change="onViewChanged()"
+                       ng-model="userInfo.notifyMessages">
+
+                <label  class="label__settings" for="settings-aletr2">Новые сообщения</label>
+            </fieldset>
+
+            <fieldset class="fieldset__settings">
+                <input class="input__settings"type="checkbox" name="settings-aletr3" id="settings-aletr3"
+                       ng-change="onViewChanged()"
+                       ng-model="userInfo.notifyNews">
+
+                <label class="label__settings" for="settings-aletr3">Важные новости</label>
+            </fieldset>
+        </div>
+
+        <input class="input__edit-button"
+               type="submit"
+               value="Сохранить изменения"
+               ng-class="{'input__edit-button-disabled': !isViewChanged, 'input__edit-button-enabled': isViewChanged}"
+               ng-click="onSave()">
+        </form>
+    </main>
+
+</div>

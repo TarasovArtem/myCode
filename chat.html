@@ -1,0 +1,103 @@
+<div class="wrapper-inner">
+     <div ng-include src="'templates/nav.html'" ng-controller="controllers.MainNav" class="nav-include"></div>
+
+       <main class="content chat clearfix">
+           <div class="chat__main-header admin-main-header clearfix">
+               <h2>
+                   <span class="admin-main-header__h2">Сообщения</span>
+               </h2>
+           </div>
+
+           <div class="wrapper-chat">
+               <div class="left-side">
+
+                   <!-- TODO:
+                   <input class="search-input" type="text" name="search" placeholder="Поиск...">
+                   -->
+
+                   <div ng-repeat="cu in connectedUsers" class="contact">
+                       <div class="contact-name" ng-click="selectMember($index)">{{getMemberName(cu)}}</div>
+
+                       <!-- TODO: logics still not ready -->
+                       <!--
+                       <div class="last-message">
+                           <span class="your-message">Вы: </span>
+                           Спасибо
+                       </div>
+                       <div class="unreded-message">4</div>
+                       <div class="your-message-unreaded hidden"></div>
+                       -->
+                   </div>
+               </div>
+               
+               <div class="right-side">
+                   <!--<div class="name">Николай Сыров</div>-->
+
+                   <div class="chat-cont">
+                       <div ng-repeat="m in msgs" class="message">
+                           <div ng-if="$index==msgs.length-1" class="your-message-unreaded"></div>
+
+                           <div class="message-sender">
+                              <span>{{getMemberNameByShortId(m.from)}}</span>
+                           </div>
+
+                           <div ng-if="false" class="message-date">
+                              <span>{{formatDate(m.date)}}</span>
+                           </div>
+
+                           <div class="message-text">{{m.msg}}</div>
+                       </div>
+
+                       <!-- TODO: file
+
+                       <div class="message">
+                           <div class="your-message-unreaded"></div>
+                           <div class="message-sender">Сергей</div>
+                           <div class="message-text">До встречи сынок.<br> <a href="">Файлик.doc</a></div>
+                       </div>
+
+                   </div>
+
+                   <form class="right-form" accept-charset="utf8" id="chat-form" class="clearfix" method="post">
+                       <textarea class="textarea-form" name="chat-new-messege" placeholder="Напишите сообщение..." ng-model="msg"></textarea>
+
+                       <div class="chat-file">
+                           <span class="chat-item glyphicon glyphicon-file"></span>
+                           <span class="chat-item glyphicon glyphicon-camera"></span>
+                       </div>
+
+                       <input class="input-chat" type="submit" value="отправить" ng-click="sendMessage(msg)">
+                   </form>
+
+                       -->
+                   </div>
+
+                   <div ng-if="userSelected!=-1">
+                       <textarea
+                              class="textarea-form"
+                              name="chat-new-messege"
+                              autofocus
+                              placeholder="Напишите сообщение..."
+                              my-enter="sendMessage(textMsg)"
+                              data-ng-model="textMsg">
+                       </textarea>
+
+                       <div class="chat-file">
+                           <!-- TODO:
+                           <span class="chat-item glyphicon glyphicon-file"></span>
+                           <span class="chat-item glyphicon glyphicon-camera"></span>
+                           -->
+                       </div>
+
+                       <input
+                              class="input-chat"
+                              type="submit"
+                              value="отправить"
+                              ng-click="sendMessage(textMsg)">
+                    </div>
+
+               </div>
+
+           </div>
+       </main>
+</div>

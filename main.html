@@ -1,0 +1,148 @@
+<div class="wrapper-inner">
+    <div ng-include src="'templates/nav.html'" ng-controller="controllers.MainNav" class="nav-include"></div>
+    <main class="content clearfix feed">
+        <div class="main-header admin-main-header clearfix">
+              <h2 class="admin-main-header__h2">Лента</h2>
+        </div>
+
+        <div class="object-line" ng-if="!showSpinner && isNoObjects" >
+            <div class="block clearfix">
+                <h2 class="line-header">
+                    <span>Привет</span>
+                    <i class="fa fa-smile-o"></i>
+                </h2>
+                <h3 class="line-header">Здесь пока пусто!</h3>
+                <p class="help-text">
+                Начните с добавления своего первого объекта, например, квартиры:
+                </p>
+                <div class="line-button">
+                    <button class="objects__button" ng-click="addNew()">
+                         <span class="objects__button-span button-span">
+                              <span>
+                                   <i class="fa fa-plus"></i>
+                              </span>
+                              <span>Добавить</span>
+                         </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="object-line">
+            <div class="block clearfix" ng-repeat="i in items" ng-class="{'block-expired': i.daysLeft<=1}" >
+                <div class="line-content" >
+                    <div class="object-name">{{i.address}}</div>
+                    <div class="experation-date">Через {{i.daysLeft}} дней</div>
+                </div>
+                <div class="type">
+                    <div class="type-name">{{i.title1}}</div>
+                    <div class="type-info">{{i.title2}}</div>
+                </div>
+
+                <div class="buttons" ng-if="(i.type==1) && (i.paymentType!=3)" >
+                    <a href="{{i.link}}/data" class="utilities-button">Сообщить об оплате</a>
+<!--
+                    <button class="line-remember__button">Напомнить позже</button>
+-->
+                </div>
+                <div class="buttons" ng-if="(i.type==1) && (i.paymentType==3)">
+                    <a href="{{i.link}}/data" class="utilities-button">Передать показания</a>
+                    <!--
+                    <button class="line-remember__button">Напомнить позже</button>
+                    -->
+                </div>
+                <div class="buttons" ng-if="i.type==0">
+                    <button class="line-pay__button" ng-click="gotoSubs()">Продлить</button>
+                    <!--
+                    <button class="line-remember__button">Напомнить позже</button>
+                    -->
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

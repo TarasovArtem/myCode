@@ -1,0 +1,36 @@
+<div class="wrapper index">
+  <header class="index recovery">
+      <div>
+          <!--<img class="main-logo" src="img/logo2.svg"></img>-->
+          <img class="landing__main-logo" src="img/logo3.png"></img>
+      </div>
+  </header>
+
+  <main class="recovery">
+      <div class="recover__password">
+          <h2 class="recover__header">Восстановление пароля</h2>
+          <div ng-if="isRecovered" class="recover__text">
+              <h3 class="recover__text-h3">Мы отправили вам письмо для подтверждения сброса пароля.</h3>
+          </div>
+
+          <form class="recover__form" id="password-recovery-form">
+              <div class="spinner-inline" ng-class="{'spinner-visible': showSpinner}"></div>
+              <p class="error-msg">{{errMsg}}</p>
+
+              <div ng-if="!isRecovered">
+                   <input class="recover__input-email" type="email"
+                          name="recovery-email" 
+                          placeholder="Email" 
+                          ng-model="emailVal">
+
+                   <input class="recover__submit-button"type="submit"
+                         value="Сбросить пароль" 
+                         ng-disabled="!emailVal.length" 
+                         ng-click="onRecover(emailVal)">
+              </div>
+
+              <a ng-if="isRecovered" href="#/login" class="recover__back-button">Назад</a>
+          </form>
+      </div>
+  </main>
+</div>

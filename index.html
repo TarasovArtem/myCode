@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Квартовод - управлять арендой квартиры легко!</title>
+    <meta property="og:title" content="Управлять арендой квартиры - легко!">
+
+    <meta property="og:site_name" content="kvartovod.ru">
+    <meta property="og:url" content="http://kvartovod.ru/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+
+    <!--link href="/css/style.css" rel="stylesheet"-->
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog.css">
+    <link rel="stylesheet" href="bower_components/ngDialog/css/ngDialog-theme-default.css">
+    <link rel="stylesheet" href="bower_components/angular-datepicker/dist/angular-datepicker.css">
+    <link rel="stylesheet" href="css/ngDialog-theme.css">
+    <link href="/css/main.css" rel="stylesheet">
+
+    <!-- Angular / bower stuff-->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!--
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    -->
+
+    <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/ngDialog/js/ngDialog.js"></script>
+
+    <!--
+    <script src="bower_components/Chart.js/Chart.min.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    -->
+
+    <!--
+    <script src="bower_components/bowser/bowser.min.js"></script>
+    -->
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/moment/locale/ru.js"></script>
+    <script src="bower_components/moment-timezone/builds/moment-timezone-with-data.js"></script>
+    <script src="bower_components/angular-datepicker/dist/angular-datepicker.js"></script>
+
+    <!--
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+    -->
+
+    <script src="logics/datePicker/datePicker.js"></script>
+    <script src="logics/datePicker/datePickerUtils.js"></script>
+    <!--<script src="logics/datePicker/dateRange.js"></script>-->
+    <!--<script src="logics/datePicker/datePickerInput.js"></script>-->
+
+    <script src="logics/async.js"></script>
+    <script src="logics/setup.js"></script>
+    <script src="logics/directives.js"></script>
+    <script src="logics/helpers.js"></script>
+    <script src="logics/services.js"></script>
+
+    <script src="logics/nav.js"></script>
+    <script src="logics/landing_view.js"></script>
+    <script src="logics/register_view.js"></script>
+    <script src="logics/login_view.js"></script>
+    <script src="logics/recover_view.js"></script>
+
+    <script src="logics/main_view.js"></script>
+    <script src="logics/objects_view.js"></script>
+    <script src="logics/object_view.js"></script>
+    <script src="logics/member_view.js"></script>
+    <script src="logics/payment_view.js"></script>
+    <script src="logics/chat_view.js"></script>
+    <script src="logics/egrp_view.js"></script>
+    <script src="logics/egrp_form.js"></script>
+
+    <script src="logics/dialogs.js"></script>
+    <script src="logics/subs_view.js"></script>
+    <script src="logics/settings_view.js"></script>
+    <script src="logics/logout_view.js"></script>
+
+    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+          #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+    </style>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+         (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+               try {
+               w.yaCounter36794320 = new Ya.Metrika({
+                    id:36794320,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                    });
+               } catch(e) { }
+               });
+
+               var n = d.getElementsByTagName("script")[0],
+               s = d.createElement("script"),
+               f = function () { n.parentNode.insertBefore(s, n); };
+               s.type = "text/javascript";
+               s.async = true;
+               s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+               if (w.opera == "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+               } else { f(); }
+          })(document, window, "yandex_metrika_callbacks");
+     </script>
+     <noscript><div><img src="https://mc.yandex.ru/watch/36794320" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+     <!-- /Yandex.Metrika counter -->
+
+</head>
+
+<body ng-app="babyshka">
+     <div ui-view="" autoscroll="true" class="container"></div>
+</body>
+
+</html>

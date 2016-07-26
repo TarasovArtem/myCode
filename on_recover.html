@@ -1,0 +1,37 @@
+<div class="wrapper index" ng-app="">
+  <header class="index">
+      <div ng-include="'templates/header.html'"></div>
+  </header>
+
+  <main class="index-registration">
+      <div class="registration">
+          <h2>Создание нового пароля</h2>
+
+          <div class="spinner-inline" ng-class="{'spinner-visible': showSpinner}"></div>
+          <p class="error-msg">{{errMsg}}</p>
+
+          <form id="registration-form" name="registration-form" accept-charset="utf8" novalidate>
+              <div ng-if="!isPasswordChanged">
+                   <input type="password" 
+                          name="reg-password" 
+                          focus="setFocus"
+                          placeholder="" 
+                          ng-model="newPassword">
+
+                   <input type="submit" 
+                         value="Установить" 
+                         ng-disabled="showSpinner || newPassword.length<6" 
+                         ng-click="onReset(newPassword)">
+               </div>
+
+               <div ng-if="isPasswordChanged">
+                   <input type="submit" 
+                         value="Продолжить" 
+                         ng-disabled="showSpinner" 
+                         ng-click="onAfterReset()">
+
+               </div>
+          </form>
+      </div>
+  </main>
+</div>

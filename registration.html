@@ -1,0 +1,15 @@
+<div class="wrapper wrapper-index">
+    <header class="header-index">
+        <div ng-include="'templates/header.html'"></div>
+
+        <div class="tabs-login">
+            <a class="tab-login__tab-log" href="#/login">Вход</a>
+            <a class="tab-login__tab-reg-active" href="#/registration">Регистрация</a>
+        </div>
+    </header>
+
+    <main class="index-registration">
+       <div ng-include="'templates/reg.html'"></div>
+       <div ng-include="'templates/social_auth.html'"></div>
+    </main>
+</div>

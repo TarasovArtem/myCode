@@ -1,0 +1,52 @@
+<div class="wrapper-inner">
+
+    <div ng-include src="'templates/nav.html'" ng-controller="controllers.MainNav" class="nav-include"></div>
+
+
+     <main class="content clearfix objects">
+          <div class="objects__main-header admin-main-header object-header clearfix">
+                <h2 class="admin-main-header__h2 objects__header">
+                     <span>Объекты</span>
+                </h2>
+
+                <button class="objects__button" ng-click="addNew()">
+                  <span class="objects__button-span button-span">
+                        <span>
+                              <i class="fa fa-plus"></i>
+                        </span>
+                        <span>Добавить</span>
+                   </span>
+                </button>
+          </div>
+
+     <!--
+     <p ng-if="!objects.length" class="help-text">Похоже, у вас не создано ни одного объекта. Попробуйте добавить свой первый объект в список, например "Квартира 1".</p>
+     -->
+
+     <!-- TODO:
+
+     <div class="loading-outer" >
+          <img src="./img/loading.png" 
+               ng-class="{'loading-visible': showSpinner}" 
+               class="loading">
+     </div>
+     --> 
+               <p class="error__msg">{{errMsg}}</p>
+         <div class="payments">
+
+               <a ng-repeat="o in objects" href="#/object/{{o._id}}" class="object-item">
+                  <span class="object-item__name">
+                      {{o.name}}
+                  </span>
+                  <span ng-if="!o.invitedBy" class="object-item__name-full">
+                      {{toAddress(o)}}
+                  </span>
+                  <span ng-if="o.invitedBy" class="object-item__referal">
+                       <span class="object-item__referal-title">Вас пригласил пользователь: </span>
+                       <span class="object-item__referal-not-confirmed">{{o.invitedBy}}</span>
+                  </span>
+               </a>
+         </div>
+      </main>
+</div>
+

@@ -1,0 +1,53 @@
+<div class="wrapper-inner">
+    <div ng-include src="'templates/nav.html'" ng-controller="controllers.MainNav" class="nav-include"></div>
+    <div ng-include src="'templates/dialogs.html'"></div>
+
+    <main class="content clearfix object">
+          <div class="object__main-header admin-main-header header-content clearfix">
+              <h2 class="admin-main-header__h2 ">
+                  Выписка из ЕГРП
+              </h2>
+          </div>
+
+        <p class="error-msg">{{errMsg}}</p>
+
+        <h3 class="content-h3">Что такое ЕГРП?</h3>
+
+        <p class="content-text__type"><strong>ЕГРП</strong> - Единый государственный реестр прав на недвижимое имущество и сделок с ним.</p>
+
+        <p class="content-text__type">С его помощью можно проверить, кому принадлежит право собственности на данную недвижимость.</p>
+
+        <h3 class="content-h3">Как?</h3>
+        <ol class="content-list__type" >
+             <li>
+                  <span>Укажите ниже МАКСИМАЛЬНО полный адрес интересующего вас объекта</span>
+             </li>
+             <li>
+                  <span>Получение выписки занимает от 2х до 24 часов</span>
+             </li>
+             <li>
+                  <span>Мы пришлем Вам полную выписку на ваш e-mail - </span>
+                  <span>
+                       <strong>{{userEmail}}</strong>
+                  </span>
+             </li>
+        </ol>
+
+        <hr>
+        <input type="text" name="object-address"
+             class="content-input"
+             placeholder="Город, улица, дом..."
+             ng-model="object.address">
+
+        <input type="email" name="user-email"
+             class="content-input"
+             placeholder="E-mail"
+             ng-model="userEmail">
+
+        <button class="content-button" 
+               ng-disabled="!object.address || !userEmail"
+               ng-click="onRequest(object.address,userEmail)">
+                  <span class="button-span">Заказать</span>
+        </button>
+    </main>
+</div>

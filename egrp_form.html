@@ -1,0 +1,34 @@
+<div class="wrapper wrapper-index">
+
+<header class="header-index">
+     <div ng-include="'templates/header.html'"></div>
+</header>
+
+<main class="index-login">
+ <h1>ЕГРП Форма Ввода:</h1>
+
+ <div class="login-form">
+     <form id="auth-email-form" class="login-form" name="auth-email-form" accept-charset="utf8" method="post" novalidate>
+         <input 
+               class="login-form__auth-email" 
+               type="email" 
+               name="auth-email" required 
+               ng-disabled="true"
+               ng-model="sendTo">
+         
+         <input 
+               class="login-form__auth-password" 
+               type="text" 
+               autofocus
+               required
+               placeholder="Данные из ЕГРП" 
+               ng-model="textToSend">
+
+         <input type="submit"
+                class="login-form__submit-button"
+                value="Отправить данные"
+                ng-disabled="!textToSend.length"
+                ng-click="sendData(sendTo,textToSend)">
+     </form>
+</div>
+</div>

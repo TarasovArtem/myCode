@@ -1,0 +1,137 @@
+<div class="wrapper-inner">
+    <div ng-include src="'templates/nav.html'" ng-controller="controllers.MainNav" class="nav-include"></div>
+    <div ng-include src="'templates/dialogs.html'"></div>
+
+<main class="content clearfix object-payment">
+ <div class="object-payment__header">
+      <h1 class="object-payment__pay">
+          <span>Платеж </span>
+          <span><strong>{{paymentIndex}}</strong></span>
+          <span> для </span>
+          <span><strong>{{object.name}}</strong></span>
+      </h1>
+ </div>
+
+ <div class="object-payment__main-header admin-main-header  clearfix">
+     <h2 class="object__header object-payment__header-pay">
+          <input class="object-payment__input"
+               type="text" 
+               name="payment-name" 
+               autofocus
+               placeholder="Название платежа" 
+               ng-change="onViewChanged()"
+               ng-model="payment.name">
+     </h2>
+    <div class="pull-right">
+         <button class="object-payment__edit-button"
+            ng-click="save()"
+            ng-disabled="!isViewChanged">
+               <span class="object-payment__button-span button-span ">Сохранить изменения</span>
+        </button>
+
+        <button class="object-payment__delete-button"
+            ng-click="removePayment()"
+            ng-disabled="!isIAmObjectOwner">
+              <span class="object-payment__button-delete__span button-span "><i class="fa fa-trash-o"></i>&nbsp;Удалить платеж</span>
+        </button>
+    </div>
+ </div>
+
+<p class="error-msg">{{errMsg}}</p>
+
+<div class="object-payment__address clearfix">
+    <h3 class="content-h3">
+         <span>Тип</span>
+    </h3>
+
+    <fieldset class="object-payment__fieldset">
+        <input class="input__pay"
+               type="radio"
+               ng-model="payment.type" 
+               ng-disabled="!isIAmObjectOwner"
+               ng-change="onViewChanged()"
+               value="1" name="settings-aletr1" id="settings-aletr1">
+
+        <label class="label__pay" for="settings-aletr1">Платеж за аренду</label>
+    </fieldset>
+
+    <fieldset class="object-payment__fieldset">
+        <input class="input__pay"
+               type="radio"
+               ng-model="payment.type" 
+               ng-disabled="!isIAmObjectOwner"
+               ng-change="onViewChanged()"
+               value="2" name="settings-aletr2" id="settings-aletr2">
+
+        <label class="label__pay" for="settings-aletr2">Коммунальный платеж</label>
+    </fieldset>
+
+    <fieldset class="object-payment__fieldset">
+        <input class="input__pay"
+               type="radio"
+               ng-model="payment.type" 
+               ng-disabled="!isIAmObjectOwner"
+               ng-change="onViewChanged()"
+               value="3" name="settings-aletr3" id="settings-aletr3">
+
+        <label class="label__pay" for="settings-aletr3">Платеж по счетчику</label>
+    </fieldset>
+</div>
+
+<!-- Who --> 
+<div class="object-payment__address clearfix">
+    <h3 class="content-h3" ng-if="payment.type==1">Кому?</h3>
+    <h3 class="content-h3" ng-if="payment.type!=1">Кто платит?</h3>
+
+    <fieldset class="object-payment__fieldset">
+        <input class="input__pay"
+               type="radio"
+               ng-model="paymentFor" 
+               ng-change="onViewChanged()"
+               ng-disabled="!isIAmObjectOwner"
+               value="1" 
+               name="pay-from1" 
+               id="pay-from1">
+
+        <label class="label__pay" for="pay-from1" ng-if="payment.type==1">Платеж <strong>для</strong> {{otherMember.name}}</label>
+        <label class="label__pay" for="pay-from1" ng-if="payment.type!=1">Должен оплатить я</label>
+    </fieldset>
+
+    <fieldset class="object-payment__fieldset">
+        <input class="input__pay"
+               type="radio"
+               ng-model="paymentFor" 
+               ng-change="onViewChanged()"
+               ng-disabled="!isIAmObjectOwner"
+               value="2" 
+               name="pay-from2" 
+               id="pay-from2">
+
+        <label class="label__pay" for="pay-from2" ng-if="payment.type==1">Платеж <strong>мне</strong></label>
+        <label class="label__pay" for="pay-from2" ng-if="payment.type!=1">Должен оплатить {{otherMember.name}}</label>
+    </fieldset>
+</div>
+
+<!-- Sum -->
+<div class="object-payment__transfer clearfix">
+     <h3 class="content-h3">Сумма</h3>
+     <p class="subcontent-h3">Можно оставить пустой</p>
+
+     <input class="object-payment__transfer-input"
+            type="text" name="payment-amount"
+            placeholder=""
+            ng-if="payment.type==3"
+            value=""> 
+
+     <input class="object-payment__transfer-input"
+            type="text" name="payment-amount"
+            placeholder=""
+            ng-if="payment.type!=3"
+            ng-change="onViewChanged()"
+            ng-model="payment.amount">
+</div>
+
+<div ng-include src="'templates/payment_period.html'"></div>
+
+</main>
+</div>
