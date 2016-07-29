@@ -1,0 +1,96 @@
+.button(@w, @h){
+  border: none;
+  width: @w;
+  height: @h;
+  background: @defaultButtonBackground;
+  color: @defaultButtonTextColor;
+  border-radius: @defaultBorderRadius;
+  cursor: pointer;
+  font: @biggerFontSize @defaultButtonFont;
+  margin: 30px auto 0 auto;
+  display: block;
+  text-align: center;
+
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color:@defaultButtonHoverBackground;
+    color:@defaultButtonHoverTextColor;
+  }
+}
+
+.button_disabled(@w, @h){
+  .button(@w, @h);
+  background: @disabledButtonBackground;
+  color: @disabledButtonColor;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color:@disabledButtonBackground;
+    color:@disabledButtonColor;
+    cursor: no-drop;
+  }
+}
+
+.button_delete(@w, @h) {
+  .button(@w, @h);
+  background: @deleteRed;
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color:@deleteRedHover;
+  }
+}
+.button_delete_disabled(@w, @h) {
+  .button_disabled(@w, @h);
+  background: @deleteRedDisabled;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color:@deleteRedDisabled;
+  }
+}
+
+.button-span {
+
+  display: block;
+  margin: 0 auto;
+}
+
+.button-green(@w, @h) {
+  .button(@w, @h);
+  background-color: @buttonGreen;
+
+  &:hover,
+  &:focus{
+    outline: none;
+    background-color:@buttonDarkGreen;
+    color:@defaultButtonHoverTextColor;
+  }
+}
+
+.button-green-white(@w, @h) {
+  .button(@w, @h);
+  border: 2px solid @buttonGreen;
+  background-color: #fff;
+  color: @buttonGreen;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: #fff;
+    border: 2px solid @buttonDarkGreen;
+    color: @buttonDarkGreen;
+  }
+}
+
+.pseudo-button {
+  margin-left: 0;
+  display: block;
+  text-decoration: none;
+  padding-top: 13px;
+  box-sizing: border-box;
+}

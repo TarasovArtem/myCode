@@ -1,0 +1,95 @@
+html {
+  height: @defaultHeight;
+  position: relative;
+}
+body {
+  position: relative;
+  background: @bodyBg;
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+  height: auto;
+}
+.container {
+  min-height: 100%;
+  position: relative;
+  height: auto;
+  display: flex;
+  width: @defaultWidth;
+}
+* html .container  {
+  height: 100%;
+}
+textarea:focus {
+  outline: none;
+}
+.hidden {
+  display: none;
+}
+.logo {
+  width: 517px;
+  display: block;
+  margin: 40px auto 0;
+}
+
+a {
+  color: @defaultLinkColor;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: @hoverLinkColor;
+    text-decoration: none;
+  }
+}
+fieldset {
+  border: none;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+main.index form .ng-invalid.ng-dirty,
+main.index-login form .ng-invalid.ng-dirty,
+main.index-registration form .ng-invalid.ng-dirty {
+  border-color: @errorBorderColor;
+}
+
+.error-msg {
+  color: @red;
+  text-align: center;
+}
+.clearfix:after {
+  content: " ";
+  clear: both;
+  display: block;
+  width: @defaultWidth;
+}
+fieldset input[type='checkbox'] + label:before,
+fieldset input[type='radio'] + label:before{
+  .checkbox_input();
+}
+fieldset input[type='checkbox']:checked + label:before,
+fieldset input[type='radio']:checked + label:before{
+  .checkbox_input();
+  background: url("@{image-path}/checkbox.png");
+  background-size: cover;
+  border: none;
+}
+.button-link{
+  display: inline-block;
+  font: 16px @defaultButtonFont;
+  color: @menuBg;
+  text-decoration: none;
+  border-bottom: 1px dashed @menuBg;
+  margin-bottom: @defaultMargin;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+
+    font: 16px @defaultButtonFont;
+    color: @menuBg;
+    text-decoration: none;
+    border-bottom: 1px dashed @menuBg;
+  }
+}
+

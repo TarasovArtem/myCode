@@ -1,0 +1,55 @@
+@media(max-width: @media-width) {
+  .wrapper {
+    min-width: 100%;
+  }
+
+  .payment-history__input {
+    float: none;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    .mobile-width(@md-width);
+    padding: 0;
+  }
+  .payment-history__edit-button,
+  .payment-history__edit-button:disabled {
+    float: none;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    .mobile-width(@md-width);
+  }
+
+  .payment-history_h3 {
+    float: none;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px auto 0 auto;
+
+  }
+
+
+}
+
+@media(max-width: 362px){
+  .payment-history__input {
+    float: none;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    .mobile-width(@sm-width);
+  }
+  .payment-history__edit-button,
+  .payment-history__edit-button:disabled {
+    float: none;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    .mobile-width(@sm-width);
+  }
+
+  .payment-history_h3 {
+    float: none;
+    text-align: center;
+    font-size: 18px;
+    margin: 20px auto 0 auto;
+
+  }
+
+}

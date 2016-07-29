@@ -1,0 +1,79 @@
+.wrapper-index {
+  .wrapper();
+}
+
+.tabs-login {
+  width: @defaultTabLoginWidth;
+  height: @defaultTabLoginHeight;
+  margin: @defaultTabLoginMargin;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  display: block;
+}
+
+
+.tab-login__tab-log {
+  .tab-login__tab(@defaultTabRadius 0 0 @defaultTabRadius, @defaultTabBackground, @defaultTabTextColor);
+}
+
+.tab-login__tab-log-active  {
+  .tab-login__tab(@defaultTabRadius 0 0 @defaultTabRadius , @activeTabBackground, @activeTabTextColor);
+}
+
+.tab-login__tab-reg {
+  .tab-login__tab(0 @defaultTabRadius @defaultTabRadius 0, @defaultTabBackground, @defaultTabTextColor);
+}
+
+.tab-login__tab-reg-active  {
+  .tab-login__tab(0 @defaultTabRadius @defaultTabRadius 0, @activeTabBackground, @activeTabTextColor);
+}
+
+.header-index {
+
+}
+.index-login {
+  width: @defaultIndexLogWidth;
+  margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  outline: none;
+}
+
+.login-form {
+  display: block;
+  margin-top: 0em;
+}
+
+.login-form__auth-email {
+  .login-form__auth();
+}
+
+.login-form__auth-password {
+  .login-form__auth();
+}
+
+.login-form__submit-button{
+  .button(@defaultButtonWidth, @defaultButtonHeight);
+
+
+  &:disabled {
+    .button_disabled(@defaultButtonWidth, @defaultButtonHeight);
+  }
+}
+
+.login-form__recovery-button  {
+  .button_link(@tabFontSize, @defaultTabFont, @activeTabTextColor, @defaultButtonWidth);
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+}
+

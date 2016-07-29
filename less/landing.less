@@ -1,0 +1,76 @@
+.landing-header {
+  padding-top: @defaultMargin/2;
+  width: @wrapperIndexWidth;
+  margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  font-weight: normal;
+}
+
+.subscribe {
+  float: right;
+  padding: 10px;
+}
+
+.landing__main-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  width: 30%;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+}
+
+.landing__submit-button {
+  .button(@defaultButtonWidth, @defaultButtonHeight);
+
+
+  &:disabled {
+    .button_disabled(@defaultButtonWidth, @defaultButtonHeight);
+  }
+
+  margin: 0 auto;
+}
+.landing__input-email {
+  width: @defaultButtonWidth;
+  margin: 0 auto 5px;
+}
+.landing__index-login {
+  width: 960px;
+  margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  font-weight: normal;
+}
+
+.landing-login {
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  font-weight: normal;
+}
+
+.landing__login-header2 {
+  font: 30px @defaultButtonFont;
+  text-align: center;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+}
+
+.landing__button{
+  .button(@defaultButtonWidth, @defaultButtonHeight);
+
+  &:disabled {
+    .button_disabled(@defaultButtonWidth, @defaultButtonHeight);
+  }
+  .pseudo-button();
+
+  margin: 0 auto;
+}

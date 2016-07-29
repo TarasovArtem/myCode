@@ -1,0 +1,96 @@
+@media(max-width: @media-width){
+  body {
+    overflow-x: hidden;
+  }
+  .wrapper{
+    min-width: 100%;
+  }
+  .wrapper-inner {
+    width: 100%;
+  }
+
+  .subscribe {
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .content {
+    width: 100%;
+    padding: 0px 0;
+  }
+  .content-block,
+   {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .content-h3 {
+    width: 100%;
+    float: none;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .admin-main-header {
+      float: none;
+      padding: 20px 0;
+      text-align: center;
+  }
+
+  .admin-main-header__h2 {
+    width: 100%;
+    height: 100px;
+    float: none;
+    font-size: 25px;
+    padding: @defaultMargin 0;
+  }
+
+  .object__main-header.pull-right,
+  .object__header {
+    float: none !important;
+    padding: 0;
+  }
+
+  .pull-left {
+    float: none !important;
+  }
+
+  .object__header,
+  .object__button-edit,
+  .object__button-edit:disabled,
+  .object__button-delete,
+  .object__button-delete:disabled{
+    float: none;
+    margin: 0 auto;
+    display: block;
+    .mobile-width(@md-width);
+  }
+  .object-item {
+    .mobile-width(@md-width);
+    float: none;
+    text-align: center;
+    padding: 25px 20px;
+    font: 15px/25px 'SF-UI-Text-Light';
+  }
+
+  .object-item__name {
+    width: auto;
+    float: none;
+    text-align: center;
+    font: 20px/20px 'SF-UI-Text-Light';
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .object-type {
+    width: auto;
+    float: none;
+    text-align: center;
+    font: 13px/16px 'SF-UI-Text-Light';
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+
+}

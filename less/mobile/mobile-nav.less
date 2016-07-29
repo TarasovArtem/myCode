@@ -1,0 +1,39 @@
+@media(max-width: @media-width){
+  .wrapper-inner {
+    display: block;
+  }
+  .nav-include {
+    width: 100%;
+    min-height: 60px;
+  }
+  .left-side-menu {
+    width: 100%;
+    float: none;
+    height: auto;
+  }
+  .mobile-menu {
+    display: block;
+    color: @background;
+    margin: 0 @defaultMargin/4 0;
+    padding: @defaultMargin/2;
+    float: left;
+    font-size: 1em;
+  }
+
+  h1.menu-header {
+    margin: 0 @defaultMargin/2 0;
+  }
+
+  .main-link {
+    margin: @defaultMargin/2 @defaultMargin/2 0;
+    float: left;
+    height: 25px;
+  }
+  .menu-header:after {
+    content: "";
+    clear: both;
+    height: 1px;
+  }
+}
+
+

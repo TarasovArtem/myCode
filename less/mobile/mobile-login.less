@@ -1,0 +1,70 @@
+@media(max-width: @media-width){
+  .wrapper{
+    min-width: 100%;
+  }
+  .header-index {
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+
+  .index-login {
+    width: 100%;
+  }
+
+  .logo {
+    .mobile-width(@md-width);
+  }
+  .login-form__submit-button,
+  .login-form__submit-button:disabled {
+    .mobile-width(@md-width);
+    margin: 20px auto 0 auto;
+  }
+  .tab-login__tab-log-active,
+  .tab-login__tab-log,
+  .tab-login__tab-reg,
+  .tab-login__tab-reg-active {
+    width: 50%;
+    min-width: @half-width;
+  }
+  .login-form__auth-email,
+  .login-form__auth-password {
+    .mobile-width(@md-width);
+  }
+
+
+}
+
+@media(max-width: 420px){
+  .tabs-login {
+    .mobile-width(@sm-width);
+    float: none;
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+  .tab-login__tab-log-active,
+  .tab-login__tab-log,
+  .tab-login__tab-reg,
+  .tab-login__tab-reg-active {
+    width: 50%;
+    min-width: @half-sm-width;
+    margin-bottom: 10px;
+  }
+  .login-form__auth-email {
+    .mobile-width(@sm-width);
+
+  }
+  .login-form__auth-password {
+    .mobile-width(@sm-width);
+
+  }
+  .login-form__submit-button,
+  .login-form__submit-button:disabled,
+  .reg-form__reg-name,
+  .reg-form__reg-second-name,
+  .reg-form__reg-email,
+  .reg-form__reg-password {
+    .mobile-width(@sm-width);
+    margin: 20px auto 0 auto;
+  }
+}

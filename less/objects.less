@@ -1,0 +1,52 @@
+.objects__header {
+  float: left;
+}
+
+.objects__button {
+  .button(@defaultButtonWidth, @defaultButtonHeight);
+
+
+  &:disabled {
+    .button_disabled(@defaultButtonWidth, @defaultButtonHeight);
+  }
+  text-align: center;
+  float: right;
+  display: flex;
+  margin: 0;
+}
+
+.error__msg {
+  font: 16px @defaultButtonFont;
+  text-align: center;
+  margin: @defaultMargin/2;
+  color: red;
+  display: block;
+  box-sizing: border-box;
+}
+
+.object-item {
+  box-sizing: border-box;
+  display: block;
+  width: 93%;
+  height: @objectsItemHeight;
+  padding: @defaultMargin @defaultMargin;
+  border-radius: @defaultBorderRadius;
+  border: @defaultBorder;
+  text-decoration: none;
+  margin-top: 20px;
+
+}
+
+.object-item__name {
+  font: 28px 'SF-UI-Display-Light';
+  color: @background_nav;
+  display: block;
+
+}
+
+.object-item__name-full {
+  font: 14px 'SF-UI-Text-Light';
+  color: @disabledButtonColor;
+  display: block;
+
+}

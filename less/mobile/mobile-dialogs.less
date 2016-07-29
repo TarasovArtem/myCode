@@ -1,0 +1,50 @@
+@media(max-width: @media-width) {
+  .ngdialog-content {
+    .mobile-width(@md-width);
+  }
+  .dialog__button-blue {
+    .button(@defaultButtonWidth, @defaultButtonHeight);
+  }
+
+  .dialog__button-red {
+    .button_delete(@defaultButtonWidth, @defaultButtonHeight);
+    margin-top: 5px;
+  }
+  .dlg-input-email {
+    .content-input();
+  }
+
+  .ngdialog-button-blue {
+    .dialog__button-blue();
+  }
+}
+
+@media(max-width: 368px) {
+  .dialog__button-blue {
+    .button(@defaultButtonWidth, @defaultButtonHeight);
+    .mobile-width(@sm-width);
+  }
+
+  .dialog__button-red {
+    .button_delete(@defaultButtonWidth, @defaultButtonHeight);
+    margin-top: 5px;
+    .mobile-width(@sm-width);
+  }
+
+  .dlg-input-email {
+    .content-input();
+  }
+
+  .ngdialog-button-blue {
+    .dialog__button-blue();
+  }
+
+
+  .ngdialog.ngdialog-theme-babyshka .ngdialog-button,
+  .ngdialog.ngdialog-theme-babyshka .ngdialog-button-green,
+  .ngdialog.ngdialog-theme-babyshka .ngdialog-button-blue,
+  .ngdialog.ngdialog-theme-babyshka .ngdialog-button-red {
+    width: 200px;
+  }
+
+}

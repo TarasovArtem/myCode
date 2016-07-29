@@ -1,0 +1,49 @@
+
+.recover__password {
+  .landing-login();
+}
+
+.recover__header {
+  .landing__login-header2();
+}
+
+.recover__form {
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  margin-top: 0;
+  display: block;
+  font-weight: normal;
+}
+
+.recover__input-email {
+  .login-form__auth();
+}
+
+.recover__submit-button {
+  .button(@defaultButtonWidth, @defaultButtonHeight);
+
+
+  &:disabled {
+    .button_disabled(@defaultButtonWidth, @defaultButtonHeight);
+  }
+}
+
+.recover__text-h3 {
+  text-transform: uppercase;
+  font: 14px @defaultButtonFont;
+  color: @defaultLinkColor;
+  display: block;
+  text-align: center;
+}
+
+.recover__back-button {
+  .button(@defaultButtonWidth, @defaultButtonHeight);
+
+  &:disabled {
+    .button_disabled(@defaultButtonWidth, @defaultButtonHeight);
+  }
+  .pseudo-button();
+
+  margin: 0 auto;
+}

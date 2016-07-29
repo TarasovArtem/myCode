@@ -1,0 +1,79 @@
+@media(max-width: @media-width){
+  .wrapper{
+    min-width: 100%;
+  }
+  .header-index {
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+  .registration {
+    width: 100%;
+  }
+  .tabs-login {
+    .mobile-width(@md-width);
+    float: none;
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+  .reg-form__submit-button:disabled {
+    .mobile-width(@md-width);
+    margin: 20px auto 0 auto;
+  }
+  .reg-form__registration-agreement {
+    .mobile-width(@md-width);
+    margin: 20px auto 0 auto;
+    font-size: 13px;
+  }
+
+  .reg-form__reg-name,
+  .reg-form__reg-second-name,
+  .reg-form__reg-email,
+  .reg-form__reg-password{
+    .mobile-width(@sm-width);
+    margin: 20px auto 0 auto;
+  }
+}
+
+@media(max-width: 420px) {
+  .registration {
+    .mobile-width(@sm-width);
+  }
+  .tab-login__tab-log {
+    width: 125px;
+
+  }
+  .tab-login__tab-reg-active {
+    width: 125px;
+    margin-bottom: 10px;
+
+  }
+  .reg-form__reg-name{
+    .mobile-width(@sm-width);
+  }
+  .reg-form__reg-second-name {
+    .mobile-width(@sm-width);
+  }
+  .reg-form__reg-email {
+    .mobile-width(@sm-width);
+  }
+  .reg-form__reg-password {
+    .mobile-width(@sm-width);
+  }
+  .reg-form__submit-button:disabled{
+    .mobile-width(@sm-width);
+    margin: 20px auto 0 auto;
+  }
+  .reg-form__registration-agreement {
+    .mobile-width(@sm-width);
+    margin: 20px auto 0 auto;
+    font-size: 12px;
+  }
+  .reg-form__reg-name,
+  .reg-form__reg-second-name,
+  .reg-form__reg-email,
+  .reg-form__reg-password {
+    .mobile-width(@sm-width);
+    margin: 20px auto 0 auto;
+  }
+}

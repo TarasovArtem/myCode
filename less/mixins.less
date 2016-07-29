@@ -1,0 +1,93 @@
+.wrapper {
+  width: @wrapperIndexWidth;
+  background: @wrapperBg;
+  margin: 0 auto;
+  min-height: 100%;
+  height: auto;
+  position: relative;
+}
+.tab-login__tab(@border-radius, @background, @textColor) {
+  background-color: @background;
+  border-radius: @border-radius;
+  font: @tabFontSize @defaultTabFont;
+  color: @textColor;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  width: @defaultTabWidth;
+  height: @defaultTabHeight;
+  float: left;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+}
+.text_input() {
+  display: block;
+  border: @defaultLoginBorder;
+  border-radius:@defaultTabRadius;
+  font: @defaultLoginFont;
+  color: @disabledButtonColor;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+}
+.login-form__auth() {
+  .text_input();
+  width: @defaultLoginWidth;
+  height: @defaultButtonHeight;
+  margin: 0 auto @defaultMargin;
+  padding-left: @defaultLoginPadding;
+}
+
+.button_link (@tabFontSize, @defaultTabFont, @activeTabTextColor, @defaultButtonWidth){
+  width: @defaultButtonWidth;
+  height: 18px;
+  margin: 20px auto 125px;
+  font: @tabFontSize @defaultTabFont;
+  color: @activeTabTextColor;
+}
+
+.reg_link (@defaultIndexLogWidth){
+  width: @defaultIndexLogWidth;
+  margin: 0 auto @defaultMargin;
+  display: block;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+}
+ .head_link (@background_nav, @defaultOnregPadding){
+  font: 34px @defaultButtonFont;
+  text-align: center;
+  color: @background_nav;
+  padding-bottom: @defaultOnregPadding;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+}
+
+.text_link (@defaultButtonFont,@defaultLinkColor){
+  font: 16px/24px @defaultButtonFont; // TODO: вынести в переменную размер
+  text-align: center;
+  color: @defaultLinkColor;
+  padding-bottom: 66px; // TODO: вынести в переменную
+  padding-top: 10px; // TODO: вынести в переменную
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  display: block;
+}
+
+.checkbox_input(){
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #E4E4E4;
+  border-radius: 5px;
+  left: 0;
+  top: -2px;
+}
+

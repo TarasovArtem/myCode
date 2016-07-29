@@ -1,0 +1,75 @@
+
+.settings-form__set-personnel {
+  margin-top: @defaultSettingsMargin;
+  padding-left: @defaultMainPadding;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  display: block;
+  font-weight: normal;
+}
+.settings_set {
+  margin-top: @defaultSettingsMargin;
+  padding-left: @defaultMainPadding;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  display: block;
+  font-weight: normal;
+}
+
+.settings-form__input {
+  .text_input();
+  width: @defaultTabLoginWidth;
+  height: 56px;
+  margin-bottom: @defaultMargin;
+  padding-left: @defaultMargin;
+}
+
+.fieldset__settings {
+  border: none;
+  width: @defaultTabLoginWidth;
+  height: 19px;
+  margin-bottom: 32px;
+  padding: 0;
+  font-weight: normal;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  display: block;
+  min-width: -webkit-min-content;
+}
+
+.input__settings{
+  display: none;
+}
+
+.label__settings {
+  display: block;
+  width: @defaultLoginWidth;
+  height: 19px;
+  padding-left: @defaultMainPadding;
+  font: @defaultLoginFont;
+  color: @activeTabTextColor;
+  position: relative;
+  cursor: pointer;
+
+  &:before {
+    .checkbox_input();
+  }
+}
+
+.input__edit-button-enabled {
+  .button(@defaultButtonWidth, @defaultButtonHeight);
+}
+
+
+.input__edit-button-disabled {
+  .button_disabled(@defaultButtonWidth, @defaultButtonHeight);
+}
+
+.input__edit-button {
+  float: left;
+  margin-top: 10px;
+  margin-left: 40px;
+}

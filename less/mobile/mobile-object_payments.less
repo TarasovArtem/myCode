@@ -1,0 +1,167 @@
+@media(max-width: @media-width) {
+  .payments {
+    padding: 40px 0;
+  }
+  .block-pay {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+  }
+  .flex-header {
+    float: none;
+    text-align: center;
+}
+  .months-status {
+    .mobile-width(300px);
+    margin: @defaultMargin auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .month-status {
+    flex-direction: row;
+    margin-bottom: 15px;
+    display: flex;
+    text-align: center;
+    &:last-of-type {
+      margin-bottom: 15px;
+    }
+  }
+  .month {
+    flex: 1 1;
+    text-align: left;
+    font-size: 15px;
+
+  }
+  .status {
+    flex: 1 1;
+    text-align: right;
+    font-size: 14px;
+  }
+  .members {
+    height: 380px;
+  }
+  .person-item {
+    text-decoration: none;
+    display: block;
+
+  }
+
+  .start-chat-button {
+    position: absolute;
+    right: -4px;
+    top: -6px;
+  }
+  .payment-button-blue {
+    float: none;
+    text-align: center;
+    .mobile-width(300px);
+    margin: 0 auto 10px auto;
+  }
+  .payment-button-bordered {
+    float: none;
+    text-align: center;
+    .mobile-width(300px);
+    margin: 0 auto;
+  }
+  .period {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .payment-button-disabled {
+    float: none;
+    text-align: center;
+    .mobile-width(300px);
+    margin: 0 auto 10px auto;
+  }
+  .months {
+    float: none;
+    text-align: center;
+    width: 50%;
+    min-width: 300px;
+    margin: 0 auto;
+  }
+  .month-widget__status {
+    width: 54px;
+    height: 10px;
+  }
+  .object-item {
+  }
+
+  .deposit {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .member {
+    position: relative
+  }
+
+  .person-container {
+    position: relative;
+    float: none;
+    text-align: center;
+    .mobile-width(300px);
+    margin: 0 auto 10px auto;
+    display: block;
+    padding: @defaultMargin;
+  }
+  .fake-button {
+    display: none;
+    height: 0;
+    width: 100%;
+  }
+}
+
+@media(max-width: 362px) {
+  .info {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  .months-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+  .month-status {
+    flex-direction: row;
+    margin-bottom: 15px;
+    display: flex;
+    text-align: center;
+    &:last-of-type {
+      margin-bottom: 15px;
+    }
+  }
+  .month {
+    flex: 1 1;
+    text-align: left;
+    font-size: 15px;
+
+  }
+  .status {
+    flex: 1 1;
+    text-align: right;
+    font-size: 14px;
+  }
+
+  .person-item {
+    padding: 0;
+  }
+  .fake-button {
+    display: none;
+    height: 0;
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,356 @@
+.object-payment__main-header {
+  .object__main-header();
+}
+.object-payment__header-pay {
+  .object__header();
+}
+.object-payment__input {
+  .object__input();
+}
+.object-payment__input {
+  .object__input();
+}
+.object-payment__edit-button {
+  .object__button-edit();
+}
+.object-payment__delete-button {
+  .object__button-delete();
+}
+.object-payment__address {
+  .settings-form__set-personnel();
+  padding-right: 2*@defaultMargin;
+}
+.label__pay {
+  .label__settings();
+}
+.payments {
+  padding: 20px 40px;
+  border-bottom: 1px solid #E4E4E4;
+}
+.payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.block-pay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.flex-left,
+.flex-right {
+  flex: 1 1;
+}
+.fake-button {
+  display: block;
+  height: 70px;
+  width: 100%;
+}
+.payment-button-blue {
+  .button(300px, 50px);
+  .pseudo-button();
+  margin: 0 2*@defaultMargin @defaultMargin 0;
+  float: left;
+}
+.center-payment-button-blue {
+  .button(300px, 50px);
+  .pseudo-button();
+  margin: 0 auto @defaultMargin;
+}
+
+.add-payment-button {
+  .button(300px, 50px);
+  .pseudo-button();
+  margin: 0 auto 0;
+}
+
+.payment-button-bordered {
+  .button(300px, 50px);
+  .pseudo-button();
+  margin: 0 0 @defaultMargin 0;
+  border: 2px solid @defaultButtonBackground;
+  background: #fff;
+  color: @defaultButtonBackground;
+  float: left;
+}
+
+.payment-button-disabled {
+  .button_disabled(300px, 50px);
+  .pseudo-button();
+  margin: 0 0 0 0;
+}
+
+
+.flex-header {
+  padding: 0;
+  margin: 0;
+}
+.info-header {
+  display: block;
+  font: 34px 'SF-UI-Display-Light';
+  color: #293541;
+  padding-left: 40px;
+}
+.info {
+  display: block;
+  font: 34px 'SF-UI-Display-Light';
+  color: #293541;
+}
+.type-pay {
+  display: block;
+  font: 14px/27px "SF-UI-Text-Light";
+  color: #808080;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+
+.month-widget {
+  width: 52px;
+  margin-top: @defaultMargin;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+.pay-button:last-of-type,
+.utilities-button:last-of-type,
+.empty-button:last-of-type {
+  margin-bottom: 0;
+}
+.pay-button:hover,
+.utilities-button:hover,
+.empty-button:hover {
+  background-color: #3B93D3;
+  color: rgba(255, 255, 255, 0.9);
+}
+.month-widget__status {
+  width: 44px;
+  height: 10px;
+  background-color: #E4E4E4;
+}
+.paid {
+  background-color: #78CE1B;
+}
+.pending {
+  background-color: #54ACEC;
+}
+
+.months-status {
+  height: 95px;
+  margin-bottom: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.month-status {
+  margin-bottom: 15px;
+}
+.month-status:last-of-type {
+  margin-bottom: 0;
+}
+.month {
+  width: 130px;
+  font: 18px 'SF-UI-Text-Light';
+  color: #4D4D4D;
+  display: inline-block;
+}
+.status {
+  font: 18px 'SF-UI-Text-Light';
+  color: #808080;
+  display: inline-block;
+}
+.paymant-history-button:hover {
+  border-color: #3B93D3;
+  color: #3B93D3;
+}
+.period {
+  width: 720px;
+  height: auto;
+  padding-top: 45px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #E4E4E4;
+}
+.month-widget {
+  margin-top: 0;
+}
+.month-widget:last-of-type {
+  margin-right: 0;
+}
+.month-widget__name {
+  font: 14px 'SF-UI-Text-Light';
+  color: #808080;
+  padding-bottom: 13px;
+}
+
+.buttons .move-out-button,.extend-arenda-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  float: left;
+  margin-right: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font: 18px 'SF-UI-Text-Light';
+  text-decoration: none;
+}
+
+.members {
+  width: 720px;
+  padding-top: 20px;
+}
+
+.member {
+  width: 100%;
+  height: 90px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.member:last-of-type {
+  margin-bottom: 30px;
+}
+.members-inner {
+  padding: @defaultMargin @defaultMargin 0;
+}
+.person-item {
+  text-decoration: none;
+  display: block;
+}
+
+.start-chat-button {
+  position: absolute;
+  right: 60px;
+  top: 22px;
+  display: block;
+  width: 44px;
+  height: 44px;
+  background: url(../img/icon_blue-03.svg);
+}
+
+.deposit {
+  width: 720px;
+  height: 90px;
+  padding-top: 20px;
+  border-bottom: 1px solid #E4E4E4;
+}
+
+.edit {
+  margin-top: 20px;
+  width: 720px;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+.person-container {
+  box-sizing: border-box;
+  display: block;
+  width: 93%;
+  height: @personItemHeight;
+  padding: 3*@defaultMargin/4 @defaultMargin;
+  border-radius: @defaultBorderRadius;
+  border: @defaultBorder;
+  text-decoration: none;
+
+}
+
+.object-payment__transfer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.object-payment__transfer-header{
+  .content-admin__subheader();
+}
+
+.object-payment__transfer-input {
+  .content-input();
+  background: #fff;
+}
+
+
+/*
+.object-payment__pay {
+  margin: 0 0 0 0;
+  padding: @defaultMargin/2 0;
+  text-align: center;
+  display: block;
+  font: 34px @defaultButtonFont;
+  color: @menuBg;
+  background-color: @disabledButtonBackground;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+}
+.object-payment__main-header {
+  .object__main-header();
+}
+
+.object-payment__header-pay {
+  .object__header();
+}
+
+.object-payment__input {
+  .object__input();
+}
+
+.object-payment__edit-button {
+  .object__button-edit();
+}
+
+.object-payment__delete-button {
+  .object__button-delete();
+}
+
+.object-payment__address {
+  .settings-form__set-personnel();
+}
+
+.object-payment__header-type {
+  .content-admin__subheader();
+}
+
+.object-payment__fieldset {
+  .fieldset__settings();
+  position: relative;
+}
+.input-pay {
+  display: none;
+}
+.input__pay {
+  .input__settings();
+}
+.label__pay {
+  .label__settings();
+}
+
+
+.payment-history-button {
+  .button-green-white(@defaultButtonWidth, @defaultButtonHeight);
+  display: block;
+  text-decoration: none;
+  padding-top: 13px;
+  margin-left: 0;
+  box-sizing: border-box;
+}
+
+.utilities-button {
+  .button-green(@defaultButtonWidth, @defaultButtonHeight);
+  .pseudo-button();
+}
+*/

@@ -1,0 +1,210 @@
+.chat {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  flex-direction: column;
+  display: flex;
+}
+.wrapper-chat {
+  height: 100%;
+  flex: 1 1;
+  flex-direction: row;
+  display: flex;
+  background: @wrapperBg;
+}
+
+.left-side {
+  border-right: 1px solid @activeTabBackground;
+  flex: 1 1;
+}
+
+.right-side {
+  flex:2 2;
+}
+.search-input {
+  width: 200px;
+  height: 50px;
+  background-color: @activeTabBackground;
+  border: none;
+  padding-left: 40px;
+  padding-right: 23px;
+  font: 14px @defaultButtonFont;
+  color: @disabledButtonColor;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 75px;
+  position: relative;
+  padding-left: 40px;
+  border-bottom: 1px solid @activeTabBackground;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: @disabledButtonBackground;
+  }
+}
+
+.contact.active {
+  background-color: @disabledButtonBackground;
+}
+
+.contact-name {
+  font: 15px @defaultTabFont;
+  color: #354052;
+  margin-bottom: 5px;
+}
+
+.last-message span {
+  color: @defaultButtonBackground;
+}
+.your-message {
+  color: @defaultButtonBackground;
+}
+
+.unreded-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 34px;
+  right: 17px;
+  background-color: @defaultButtonBackground;
+  border-radius: 50%;
+  font: 14px @defaultButtonFont;
+  color: @wrapperBg;
+  margin-top: 5px;
+}
+
+.your-message-unreaded {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: @defaultChatColor;
+  right: 20px;
+  top: 30px;
+}
+
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  border-bottom: 1px solid @activeTabBackground;
+  font: 14px @defaultButtonFont;
+  color: #354052;
+  background-color: @disabledButtonBackground;
+}
+.chat-cont {
+  padding: 5px 0;
+}
+
+.message {
+  width: 480px;
+  padding: 10px 40px;
+  position: relative;
+}
+
+.message-sender {
+  font: 14px @defaultButtonFont;
+  color: @defaultButtonBackground;
+}
+
+.message-date {
+  font: 14px @defaultButtonFont;
+}
+
+.message-text {
+  font: 15px @defaultTabFont;
+  color: #354052;
+  margin-bottom: 5px;
+}
+
+.message-text a {
+  text-decoration: none;
+  color: @defaultButtonBackground;
+}
+
+.message-text a:hover {
+  color: #3B93D3;
+}
+
+.your-message-unreaded {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: @defaultChatColor;
+  left: 15px;
+  top: 25px;
+}
+
+.right-form {
+  width: 480px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  position: relative;
+}
+
+.textarea-form {
+  display: block;
+  width: 100%;
+  padding: 30px @defaultMargin/2 0;
+  margin-bottom: @defaultMargin;
+  border: none;
+  border-bottom: 1px solid @activeTabBackground;
+  font: 14px @defaultButtonFont;
+  color: #222222;
+  resize: vertical;
+  box-sizing: border-box;
+}
+.textarea-form::-webkit-input-placeholder {
+  color: @defaultButtonBackground;
+}
+.input-chat {
+  float: right;
+  padding: 0 0 0 0;
+  margin-right: 20px;
+  background: none;
+  border: none;
+  font: 18px @defaultNavFont;
+  color: @defaultButtonBackground;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 10px;
+
+  &:hover {
+    color: #3B93D3;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.chat-file {
+  width: 120px;
+  margin-right: 25px;
+}
+
+.chat-item {
+  float: left;
+  color: @disabledButtonColor;
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+
+.erty {
+  color:#777777;
+}

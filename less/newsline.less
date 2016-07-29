@@ -1,0 +1,96 @@
+
+
+.line-header {
+  float: none;
+  text-align: center ;
+}
+
+.help-text {
+  float: none;
+  text-align: center ;
+  font: @defaultLoginFont;
+}
+.line-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.object-line {
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.block {
+  width: 90%;
+  height: 200px;
+  margin: @defaultMargin;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid @activeTabBackground;
+}
+
+.block-expired {
+  border: 2px solid @expiredTabBackground;
+}
+
+.line-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.object-name {
+  font: 22px 'SF-UI-Text-Light';
+  color: #808080;
+  display: block;
+  padding-left: 5px;
+}
+
+.experation-date {
+  font: 22px 'SF-UI-Text-Light';
+  color: @activeTabTextColor;
+  display: block;
+  padding-right: 5px;
+}
+
+.type {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px;
+  padding-left: 5px;
+}
+
+.type-name {
+  font: 28px 'SF-UI-Text-Light';
+  color: @activeTabTextColor;
+  display: block;
+}
+
+.type-info {
+  font: 22px 'SF-UI-Text-Light';
+  color: @disabledButtonColor;
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.line-pay__button {
+  .button(@defaultButtonWidth, @defaultButtonHeight)
+}
+
+.line-remember__button {
+  .button-green-white(@defaultButtonWidth, @defaultButtonHeight)
+}

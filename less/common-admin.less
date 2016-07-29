@@ -1,0 +1,81 @@
+.nav-include {
+  background: @menuBg;
+}
+.left-side-menu {
+  background: @menuBg;
+  width: @defaultNavWidth;
+  position: relative;
+  height: @defaultHeight;
+  flex: 1;
+  float:left;
+}
+
+.content {
+  width: @defaultSettingsWidth;
+  display: block;
+  float:left;
+  margin: 0 auto @defaultMargin;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  font-weight: normal;
+  position: relative;
+  height: @defaultHeight;
+  flex: 4;
+  background-color: white;
+}
+.wrapper-inner {
+  .wrapper();
+  background: #fff;
+  flex-direction: row;
+  display: flex;
+}
+.content-admin__subheader {
+  font: 26px @defaultButtonFont;
+  color: @menuBg;
+  padding-bottom: @defaultSettingsPadding;
+  box-sizing: border-box;
+  transition: 0.1s;
+  outline: none;
+  display: block;
+}
+.admin-main-header {
+  height: @defaultMainHeight;
+  padding: @defaultMainPaddingTop @defaultMainPadding @defaultMainPaddingTop/4;
+  background-color: @disabledButtonBackground;
+  border-bottom: @defaultLoginBorder;
+  transition: 0.1s;
+  outline: none;
+  display: block;
+  font-weight: normal;
+  width: 100%;
+  box-sizing: border-box;
+}
+.admin-main-header__h2 {
+  float: left;
+  color: @background_nav;
+  font: 34px @defaultButtonFont;
+  margin: 0;
+}
+
+
+.content-input{
+  .text_input();
+  width: 100%;
+  height: @defaultButtonHeight;
+  margin: 0 auto @defaultMargin;
+  padding-left: @defaultLoginPadding;
+}
+
+.content-h3__type{
+  text-transform: uppercase;
+  font: 14px @defaultButtonFont;
+  color: @defaultLinkColor;
+  display: block;
+  text-align: left;
+  padding-left: 2*@defaultMargin;
+}
+
+input[type=radio] {
+  display: none;
+}

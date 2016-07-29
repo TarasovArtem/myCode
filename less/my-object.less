@@ -1,0 +1,126 @@
+.object-p {
+  padding: 0;
+  margin: 0;
+}
+.object__main-header{
+  height: @defaultMainHeight + @defaultMainPaddingTop;
+  font: @defaultLoginFont;
+}
+.object__header {
+  float: left;
+  margin: 0 0 0;
+}
+.object__input {
+  .text_input();
+  width: @objectsHeaderInputWidth;
+  height: @defaultButtonHeight;
+  margin: 0 auto @defaultMargin;
+  padding-left: @defaultLoginPadding;
+}
+.object__button-edit {
+  .button(@defaultButtonWidth, @defaultButtonHeight);
+
+  &:disabled {
+    .button_disabled(@defaultButtonWidth, @defaultButtonHeight);
+    background: #fff;
+    text-align: center;
+    display: flex;
+    margin: 0 0 @defaultMargin/4;
+
+    &:hover {
+      background: #fff;
+    }
+  }
+  text-align: center;
+  display: flex;
+  margin: 0 0 @defaultMargin/4;
+}
+
+.object__button-delete {
+  .button_delete(@defaultButtonWidth, @defaultButtonHeight);
+
+
+  &:disabled {
+    .button_delete_disabled(@defaultButtonWidth, @defaultButtonHeight);
+    text-align: center;
+    display: flex;
+    margin: 0 0 0;
+  }
+  text-align: center;
+  display: flex;
+  margin: 0 0 0;
+}
+
+.content-block {
+  padding: @defaultMargin 2*@defaultMargin;
+  border-bottom: 1px solid #E4E4E4;
+  height: 200px;
+}
+.content-h3 {
+  display: block;
+  font: 34px @defaultButtonFont;
+  color: @menuBg;
+
+}
+
+.confirm-membership__button {
+  .content-button();
+  .pseudo-button();
+  margin: 0 auto @defaultMargin;
+}
+
+
+.content-button {
+  .button(@defaultButtonWidth, @defaultButtonHeight);
+
+  &:disabled {
+    .button_disabled(@defaultButtonWidth, @defaultButtonHeight);
+  }
+  text-align: center;
+  display: flex;
+  margin: 0 auto @defaultMargin/4;
+
+}
+
+.person-item {
+  background: #fff;
+
+}
+
+.object-type {
+  font: 14px @defaultButtonFont;
+  color: @disabledButtonColor;
+  text-transform: uppercase;
+}
+
+.object-payment {
+  .button-link();
+  border-bottom: none;
+  font-size: 24px;
+  margin-bottom: @defaultMargin/4;
+
+  &:hover,
+  &:focus {
+    border-bottom: none;
+    font-size: 24px;
+  }
+
+}
+
+.object-payment__type {
+  display: block;
+  font: 14px @defaultButtonFont;
+  color: @disabledButtonColor;
+  text-transform: uppercase;
+
+}
+
+.payment-block {
+  margin: 0 0 @defaultMargin;
+  padding: 0 0 @defaultMargin;
+  border-bottom: @defaultBorder;
+}
+
+.block-address {
+  padding-bottom: 20px;
+}

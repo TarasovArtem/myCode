@@ -1,0 +1,37 @@
+@media(max-width: @media-width) {
+  .content-block {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .content-input,
+  .content-button:disabled{
+    float: none;
+    text-align: center;
+    .mobile-width(@md-width);
+    margin-bottom: 10px;
+
+  }
+
+}
+
+@media(max-width: 320px) {
+  .content-block {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .content-input {
+    .mobile-width(@md-width);
+    float: none;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .content-button,
+  .content-button:disabled {
+    .mobile-width(@md-width);
+    float: none;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}

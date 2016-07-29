@@ -1,0 +1,47 @@
+@media(max-width: @media-width) {
+
+  .subscription__main-header {
+    .admin-main-header__h2();
+    padding: 0;
+    height: 80px;
+ }
+
+  .subscription__expiration-date {
+    width: 100%;
+    float: none;
+    text-align: center;
+    font: 20px @defaultButtonFont;
+    padding-top: 30px;
+    padding-left: 0;
+
+  }
+  .subscription__red-text {
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .subscription-options {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin:  0;
+
+  }
+  .subscription-options__option {
+    .mobile-width(@md-width);
+    height: 150px;
+    float: none;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .subscription-form__button,
+  .subscription-form__button:disabled {
+
+    .mobile-width(@sm-width);
+  }
+}
